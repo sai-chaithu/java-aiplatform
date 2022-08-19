@@ -32,13 +32,11 @@ import com.google.cloud.location.GetLocationRequest;
 import com.google.cloud.location.ListLocationsRequest;
 import com.google.cloud.location.ListLocationsResponse;
 import com.google.cloud.location.Location;
-import com.google.cloud.location.MockLocations;
 import com.google.common.collect.Lists;
 import com.google.iam.v1.AuditConfig;
 import com.google.iam.v1.Binding;
 import com.google.iam.v1.GetIamPolicyRequest;
 import com.google.iam.v1.GetPolicyOptions;
-import com.google.iam.v1.MockIAMPolicy;
 import com.google.iam.v1.Policy;
 import com.google.iam.v1.SetIamPolicyRequest;
 import com.google.iam.v1.TestIamPermissionsRequest;
@@ -241,6 +239,84 @@ public class FeaturestoreOnlineServingServiceClientTest {
       Assert.assertTrue(e.getCause() instanceof InvalidArgumentException);
       InvalidArgumentException apiException = ((InvalidArgumentException) e.getCause());
       Assert.assertEquals(StatusCode.Code.INVALID_ARGUMENT, apiException.getStatusCode().getCode());
+    }
+  }
+
+  @Test
+  public void writeFeatureValuesTest() throws Exception {
+    WriteFeatureValuesResponse expectedResponse = WriteFeatureValuesResponse.newBuilder().build();
+    mockFeaturestoreOnlineServingService.addResponse(expectedResponse);
+
+    EntityTypeName entityType =
+        EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+    List<WriteFeatureValuesPayload> payloads = new ArrayList<>();
+
+    WriteFeatureValuesResponse actualResponse = client.writeFeatureValues(entityType, payloads);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockFeaturestoreOnlineServingService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    WriteFeatureValuesRequest actualRequest = ((WriteFeatureValuesRequest) actualRequests.get(0));
+
+    Assert.assertEquals(entityType.toString(), actualRequest.getEntityType());
+    Assert.assertEquals(payloads, actualRequest.getPayloadsList());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void writeFeatureValuesExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockFeaturestoreOnlineServingService.addException(exception);
+
+    try {
+      EntityTypeName entityType =
+          EntityTypeName.of("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+      List<WriteFeatureValuesPayload> payloads = new ArrayList<>();
+      client.writeFeatureValues(entityType, payloads);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
+
+  @Test
+  public void writeFeatureValuesTest2() throws Exception {
+    WriteFeatureValuesResponse expectedResponse = WriteFeatureValuesResponse.newBuilder().build();
+    mockFeaturestoreOnlineServingService.addResponse(expectedResponse);
+
+    String entityType = "entityType-1482998339";
+    List<WriteFeatureValuesPayload> payloads = new ArrayList<>();
+
+    WriteFeatureValuesResponse actualResponse = client.writeFeatureValues(entityType, payloads);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockFeaturestoreOnlineServingService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    WriteFeatureValuesRequest actualRequest = ((WriteFeatureValuesRequest) actualRequests.get(0));
+
+    Assert.assertEquals(entityType, actualRequest.getEntityType());
+    Assert.assertEquals(payloads, actualRequest.getPayloadsList());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void writeFeatureValuesExceptionTest2() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockFeaturestoreOnlineServingService.addException(exception);
+
+    try {
+      String entityType = "entityType-1482998339";
+      List<WriteFeatureValuesPayload> payloads = new ArrayList<>();
+      client.writeFeatureValues(entityType, payloads);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
     }
   }
 

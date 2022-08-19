@@ -488,6 +488,17 @@ public final class Model extends com.google.protobuf.GeneratedMessageV3
      * <code>AUTOMATIC_RESOURCES = 2;</code>
      */
     AUTOMATIC_RESOURCES(2),
+    /**
+     *
+     *
+     * <pre>
+     * Resources that can be shared by multiple [DeployedModels][google.cloud.aiplatform.v1.DeployedModel].
+     * A pre-configured [DeploymentResourcePool][] is required.
+     * </pre>
+     *
+     * <code>SHARED_RESOURCES = 3;</code>
+     */
+    SHARED_RESOURCES(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -523,6 +534,17 @@ public final class Model extends com.google.protobuf.GeneratedMessageV3
      * <code>AUTOMATIC_RESOURCES = 2;</code>
      */
     public static final int AUTOMATIC_RESOURCES_VALUE = 2;
+    /**
+     *
+     *
+     * <pre>
+     * Resources that can be shared by multiple [DeployedModels][google.cloud.aiplatform.v1.DeployedModel].
+     * A pre-configured [DeploymentResourcePool][] is required.
+     * </pre>
+     *
+     * <code>SHARED_RESOURCES = 3;</code>
+     */
+    public static final int SHARED_RESOURCES_VALUE = 3;
 
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
@@ -554,6 +576,8 @@ public final class Model extends com.google.protobuf.GeneratedMessageV3
           return DEDICATED_RESOURCES;
         case 2:
           return AUTOMATIC_RESOURCES;
+        case 3:
+          return SHARED_RESOURCES;
         default:
           return null;
       }
@@ -1975,8 +1999,8 @@ public final class Model extends com.google.protobuf.GeneratedMessageV3
        * repeated .google.cloud.aiplatform.v1.Model.ExportFormat.ExportableContent exportable_contents = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];
        * </code>
        *
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of exportableContents at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for exportableContents to set.
        * @return This builder for chaining.
        */
       public Builder setExportableContentsValue(int index, int value) {
@@ -7946,9 +7970,8 @@ public final class Model extends com.google.protobuf.GeneratedMessageV3
      * repeated .google.cloud.aiplatform.v1.Model.DeploymentResourcesType supported_deployment_resources_types = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];
      * </code>
      *
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of supportedDeploymentResourcesTypes at the given
-     *     index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for supportedDeploymentResourcesTypes to set.
      * @return This builder for chaining.
      */
     public Builder setSupportedDeploymentResourcesTypesValue(int index, int value) {

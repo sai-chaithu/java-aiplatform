@@ -1,5 +1,95 @@
 # Changelog
 
+## [3.2.0](https://github.com/googleapis/java-aiplatform/compare/v3.1.0...v3.2.0) (2022-08-09)
+
+
+### Features
+
+* add a DeploymentResourcePool API resource_definition ([#997](https://github.com/googleapis/java-aiplatform/issues/997)) ([f3e6d4f](https://github.com/googleapis/java-aiplatform/commit/f3e6d4fe833160ab34ef0d87bd58dadf62aef502))
+* add DeploymentResourcePool in aiplatform v1beta1 deployment_resource_pool.proto ([#998](https://github.com/googleapis/java-aiplatform/issues/998)) ([49fb069](https://github.com/googleapis/java-aiplatform/commit/49fb069d61270657145130470d3546ea3a33490d))
+* add DeploymentResourcePoolService in aiplatform v1beta1 deployment_resource_pool_service.proto ([49fb069](https://github.com/googleapis/java-aiplatform/commit/49fb069d61270657145130470d3546ea3a33490d))
+* add shared_resources for supported prediction_resources ([f3e6d4f](https://github.com/googleapis/java-aiplatform/commit/f3e6d4fe833160ab34ef0d87bd58dadf62aef502))
+* add SHARED_RESOURCES to DeploymentResourcesType in aiplatform v1beta1 model.proto ([49fb069](https://github.com/googleapis/java-aiplatform/commit/49fb069d61270657145130470d3546ea3a33490d))
+* added SHARED_RESOURCES enum to aiplatform v1 model.proto ([3935d8f](https://github.com/googleapis/java-aiplatform/commit/3935d8f04c4585b02f1614149803ef8eed87d4e2))
+* DeploymentResourcePool and DeployementResourcePoolService added to aiplatform v1beta1 model.proto (cl/463147866) ([3935d8f](https://github.com/googleapis/java-aiplatform/commit/3935d8f04c4585b02f1614149803ef8eed87d4e2))
+* making network arg optional in aiplatform v1 custom_job.proto ([#999](https://github.com/googleapis/java-aiplatform/issues/999)) ([3935d8f](https://github.com/googleapis/java-aiplatform/commit/3935d8f04c4585b02f1614149803ef8eed87d4e2))
+* making network arg optional in aiplatform v1beta1 custom_job.proto ([3935d8f](https://github.com/googleapis/java-aiplatform/commit/3935d8f04c4585b02f1614149803ef8eed87d4e2))
+* **samples:** add all feature samples ([#980](https://github.com/googleapis/java-aiplatform/issues/980)) ([a932cf8](https://github.com/googleapis/java-aiplatform/commit/a932cf813708d23a1cc4adb4d383f66cdb7c9801))
+* **samples:** add all feature values samples ([#981](https://github.com/googleapis/java-aiplatform/issues/981)) ([818acab](https://github.com/googleapis/java-aiplatform/commit/818acab3e0186ceaea2032b9f04ca9b47e8f753e))
+
+
+### Bug Fixes
+
+* declaring test-scope artifact as runtime ([#1014](https://github.com/googleapis/java-aiplatform/issues/1014)) ([f90cc12](https://github.com/googleapis/java-aiplatform/commit/f90cc12441d31fa9b17806824003f9adc2604d60))
+
+
+### Documentation
+
+* doc edits to aiplatform v1 dataset_service.proto, job_service.proto, model_service.proto, pipeline_service.proto, saved_query.proto, study.proto, types.proto ([3935d8f](https://github.com/googleapis/java-aiplatform/commit/3935d8f04c4585b02f1614149803ef8eed87d4e2))
+* doc edits to aiplatform v1beta1 job_service.proto, model_service.proto, pipeline_service.proto, saved_query.proto, study.proto, types.proto ([3935d8f](https://github.com/googleapis/java-aiplatform/commit/3935d8f04c4585b02f1614149803ef8eed87d4e2))
+
+
+### Dependencies
+
+* update dependency com.google.api.grpc:proto-google-cloud-aiplatform-v1beta1 to v0.17.0 ([#1003](https://github.com/googleapis/java-aiplatform/issues/1003)) ([c2b98d9](https://github.com/googleapis/java-aiplatform/commit/c2b98d9d1c4bb896590eacb38ed5193d1e507b26))
+* update dependency com.google.cloud:google-cloud-bigquery to v2.14.1 ([#1006](https://github.com/googleapis/java-aiplatform/issues/1006)) ([2c959b9](https://github.com/googleapis/java-aiplatform/commit/2c959b9d72bcfe69d6429a6f9a6d0f145a2fe022))
+* update dependency com.google.cloud:google-cloud-bigquery to v2.14.3 ([#1009](https://github.com/googleapis/java-aiplatform/issues/1009)) ([b170504](https://github.com/googleapis/java-aiplatform/commit/b1705042c34be9c41125de8671339ebec7ceac86))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v3 ([#1000](https://github.com/googleapis/java-aiplatform/issues/1000)) ([6fb1534](https://github.com/googleapis/java-aiplatform/commit/6fb1534896ef3e7ec66575a92e7a8d2b2f97912b))
+* update dependency com.google.cloud:google-cloud-storage to v2.10.0 ([#1004](https://github.com/googleapis/java-aiplatform/issues/1004)) ([b6e2ab4](https://github.com/googleapis/java-aiplatform/commit/b6e2ab4fb4c169b4e31ecfec01765db94916f739))
+* update dependency com.google.cloud:google-cloud-storage to v2.11.0 ([#1005](https://github.com/googleapis/java-aiplatform/issues/1005)) ([26391a3](https://github.com/googleapis/java-aiplatform/commit/26391a3ebfb87163a3054207fc7cf337c2eb5fa0))
+* update dependency com.google.cloud:google-cloud-storage to v2.11.1 ([#1008](https://github.com/googleapis/java-aiplatform/issues/1008)) ([cba42d1](https://github.com/googleapis/java-aiplatform/commit/cba42d176e36ee2dd704efd91b4cb57029154863))
+* update dependency com.google.cloud:google-cloud-storage to v2.11.2 ([#1010](https://github.com/googleapis/java-aiplatform/issues/1010)) ([4f35eed](https://github.com/googleapis/java-aiplatform/commit/4f35eedfd485674f6e25bf92e0ad8d7c70777e1a))
+* update dependency com.google.code.gson:gson to v2.9.1 ([#1001](https://github.com/googleapis/java-aiplatform/issues/1001)) ([f12c313](https://github.com/googleapis/java-aiplatform/commit/f12c313505552a93db12c6f6d4c7986b34650069))
+
+## [3.1.0](https://github.com/googleapis/java-aiplatform/compare/v3.0.0...v3.1.0) (2022-07-13)
+
+
+### Features
+
+* **samples:** add remaining featurestore api samples ([#974](https://github.com/googleapis/java-aiplatform/issues/974)) ([872efb4](https://github.com/googleapis/java-aiplatform/commit/872efb44a685153f366533c48a79b112bfe6543e))
+* **samples:** added all entity type samples ([#976](https://github.com/googleapis/java-aiplatform/issues/976)) ([b75963f](https://github.com/googleapis/java-aiplatform/commit/b75963f7cf8435212c80b516601a0d433f3fc708))
+
+
+### Bug Fixes
+
+* enable longpaths support for windows test ([#1485](https://github.com/googleapis/java-aiplatform/issues/1485)) ([#991](https://github.com/googleapis/java-aiplatform/issues/991)) ([858e68b](https://github.com/googleapis/java-aiplatform/commit/858e68b96f0a4a391a44a69944186d2b06dc4ab3))
+
+## [3.0.0](https://github.com/googleapis/java-aiplatform/compare/v2.9.8...v3.0.0) (2022-07-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* added packaging options for C#, Ruby, and PHP
+
+### Features
+
+* add BatchImportModelEvaluationSlices API in aiplatform v1 model_service.proto ([#972](https://github.com/googleapis/java-aiplatform/issues/972)) ([3041b97](https://github.com/googleapis/java-aiplatform/commit/3041b97659d2ffccb8ff016ba0939cd1453a82aa))
+* add BatchImportModelEvaluationSlices API in aiplatform v1beta1 model_service.proto ([3041b97](https://github.com/googleapis/java-aiplatform/commit/3041b97659d2ffccb8ff016ba0939cd1453a82aa))
+* add display_name and metadata to ModelEvaluation in aiplatform model_evaluation.proto ([0ae5d15](https://github.com/googleapis/java-aiplatform/commit/0ae5d15dfc9475c113ad97a2973c70a9da8dfdcd))
+* add ListSavedQueries rpc to aiplatform v1 dataset_service.proto ([#975](https://github.com/googleapis/java-aiplatform/issues/975)) ([85be17b](https://github.com/googleapis/java-aiplatform/commit/85be17bbec3e368685f39a8efde69405a239ce5e))
+* add ListSavedQueries rpc to aiplatform v1beta1 dataset_service.proto ([85be17b](https://github.com/googleapis/java-aiplatform/commit/85be17bbec3e368685f39a8efde69405a239ce5e))
+* add model_monitoring_config to BatchPredictionJob in aiplatform v1beta1 batch_prediction_job.proto ([#892](https://github.com/googleapis/java-aiplatform/issues/892)) ([0ae5d15](https://github.com/googleapis/java-aiplatform/commit/0ae5d15dfc9475c113ad97a2973c70a9da8dfdcd))
+* add model_version_id to BatchPredictionJob in aiplatform v1 batch_prediction_job.proto ([3041b97](https://github.com/googleapis/java-aiplatform/commit/3041b97659d2ffccb8ff016ba0939cd1453a82aa))
+* add model_version_id to DeployedModel in aiplatform v1 endpoint.proto ([3041b97](https://github.com/googleapis/java-aiplatform/commit/3041b97659d2ffccb8ff016ba0939cd1453a82aa))
+* add model_version_id to PredictResponse in aiplatform v1 prediction_service.proto ([3041b97](https://github.com/googleapis/java-aiplatform/commit/3041b97659d2ffccb8ff016ba0939cd1453a82aa))
+* add saved_query_id to InputDataConfig in aiplatform v1 training_pipeline.proto ([85be17b](https://github.com/googleapis/java-aiplatform/commit/85be17bbec3e368685f39a8efde69405a239ce5e))
+* add saved_query_id to InputDataConfig in aiplatform v1beta1 training_pipeline.proto ([85be17b](https://github.com/googleapis/java-aiplatform/commit/85be17bbec3e368685f39a8efde69405a239ce5e))
+* add saved_query.proto to aiplatform v1 ([85be17b](https://github.com/googleapis/java-aiplatform/commit/85be17bbec3e368685f39a8efde69405a239ce5e))
+* add saved_query.proto to aiplatform v1beta1 ([85be17b](https://github.com/googleapis/java-aiplatform/commit/85be17bbec3e368685f39a8efde69405a239ce5e))
+* add template_metadata to PipelineJob in aiplatform v1beta1 pipeline_job.proto ([0ae5d15](https://github.com/googleapis/java-aiplatform/commit/0ae5d15dfc9475c113ad97a2973c70a9da8dfdcd))
+* **samples:** add create-featurestore sample ([#948](https://github.com/googleapis/java-aiplatform/issues/948)) ([ac7ca36](https://github.com/googleapis/java-aiplatform/commit/ac7ca36f20c0a0051b262689b1ea7c80a3146721))
+
+
+### Bug Fixes
+
+* added packaging options for C#, Ruby, and PHP ([0ae5d15](https://github.com/googleapis/java-aiplatform/commit/0ae5d15dfc9475c113ad97a2973c70a9da8dfdcd))
+* update gapic-generator-java with mock service generation fixes ([#979](https://github.com/googleapis/java-aiplatform/issues/979)) ([745b9cd](https://github.com/googleapis/java-aiplatform/commit/745b9cdfadf07f37ccf038761345817884a5b5ef))
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.13.0 ([#973](https://github.com/googleapis/java-aiplatform/issues/973)) ([87b311d](https://github.com/googleapis/java-aiplatform/commit/87b311d47db0b2f0e89cfba5854e41c7d317c360))
+
 ## [2.9.8](https://github.com/googleapis/java-aiplatform/compare/v2.9.7...v2.9.8) (2022-06-21)
 
 
